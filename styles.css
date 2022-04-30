@@ -1,0 +1,54 @@
+svg {
+  border: 1px solid;
+}
+:root {
+  --pale-leaf: #ccd4bf;
+  --burly-wood: #e7cba9;
+  --‍zinnwaldite: #eebab2;
+  --ecru-white: #f5f3e7;
+  --‍vanilla-ice: #f5e2e4;
+
+  --azalea: #f5bfd2;
+  --‍jungle-mist: #e5db9c;
+  --‍zombie: #d0bcac;
+  --‍chatelle: #beb4c5;
+  --‍tonys-pink: #e6a57e;
+}
+body {
+  display: flex;
+}
+body > div {
+  width: 50%;
+  text-align: center;
+}
+svg {
+  background-color: rgb(61, 61, 61);
+}
+svg rect {
+  /* fill: red; */
+}
+.my-styles {
+  x: 40;
+  y: 40;
+  width: 150px;
+  height: 100px;
+  fill: var(--azalea);
+  stroke: blue;
+  stroke-width: 1;
+  stroke-linejoin: bevel;
+}
+.use-star {
+  fill: var(--azalea);
+}
+.stroke-responsive {
+  stroke: green;
+  stroke: 5px;
+  vector-effect: non-scaling-stroke;
+}
+/* Penguin 
+plomo 727272
+plomo oscuro 2D2D2D
+cafe 624C03
+ama osc C7A402
+
+*/

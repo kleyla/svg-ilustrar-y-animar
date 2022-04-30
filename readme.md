@@ -9,8 +9,11 @@ En `svg` se pueden tener elementos como
 - `polyline`
 - `polygon`
 - `path` Es la etiqueta mas compleja
-- ``
-- ``
+- `g`
+- `use`
+- `defs`
+- `symbol`
+-
 
 _Estos tag tambien pueden ser alterados desde una hoja de estilos._
 
@@ -129,3 +132,153 @@ Cuando las medidas width y height no coincide con el viewBox nosotros podemos de
 - `dx` para desplazar en el eje x
 - `dy` para desplazar en el eje y
 - **tspan** es como `span` podemos usar este para dar otro estilo
+
+## Organizacion SVG
+
+Estas etiquetas nos van a permitir agrupar elementos SVG, definirlos y reutilizarlos, ahorrando muchas líneas de código.
+
+**group g**
+
+`<g></g>`
+
+**use**
+
+Usamos use para volver a usar un trazo que hayamos definido con un id
+
+```
+<path id="ejemplo" d="..." />
+<use x="50" y="50" xlink:href="#ejemplo" />
+```
+
+**Definiciones defs**
+
+Definimos trazos, degradados que inicialmente no se usaran, mas tarde los podemos usar en en algun elemento llamandolo con `xlink:href`
+
+```
+<defs>
+  <path id="ejemplo" d="..." />
+</defs>
+
+<textPath xlink:href="#ejemplo" ></textPath>
+```
+
+**symbol**
+
+Es quiza la unica etiqueta q puede tener `viewBox`. Podemos crear el svg y volverlo a usar muchas veces.
+
+```
+<svg style="display: none;">
+  <symbol id="ejemplo" viewBox="0 0 100 100">
+  ...
+  </symbol>
+</svg>
+
+<svg>
+  <use xlink:href="#ejemplo" />
+</svg>
+<svg>
+  <use xlink:href="#ejemplo" />
+</svg>
+```
+
+## Optimizacion SVG
+
+## Cargar SVG a la web
+
+Es necesario usar el atributo `xmlns` para q se renderize adecuadamente
+
+```
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+>
+</svg>
+```
+
+Y si ocupamos el protocolo `xlink` por ejemplo para vincular una imagen
+
+```
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+</svg>
+```
+
+Si agregamos svg como imagenes o de fondo en css, por ejemplo:
+
+```
+<img src="logo.svg" />
+```
+
+```
+.element {
+  background-image: url(logo.svg);
+}
+```
+
+Estas no podran ser controladas por css o js
+
+Lo mejor es tal cual svg o con `object`
+
+```
+<object type="image/svg+xml" data="logo.svg">
+</object>
+```
+
+https://github.com/jonathantneal/svg4everybody
+
+### Sistema de iconos
+
+https://icomoon.io/
+
+### SVG responsive
+
+```
+<defs>
+  <style>
+    @media screen and (max-width:900px) {
+      .star-1 {
+        display: none;
+      }
+    }
+    @media screen and (max-width:600px) {
+      .star-2 {
+        display: none;
+      }
+    }
+  </style>
+</defs>
+```
+
+El stroke no escalara como lo hacen el grafico:
+
+```
+.exa{
+  stroke: green;
+  stroke-width: 3px;
+  vector-effect: non-scaling-stroke;
+}
+```
+
+### Accesibilidad SVG
+
+Poner la etiqueta `title` para los lectores de pantalla, esta no afecta al renderizado. El atributo `aria-labelledby` nos ayuda a enlazar este
+
+La etiqueta `desc` nos ayuda a poner una descripcion del svg
+
+El atributo `role` tambien nos ayuda
+
+```
+<svg aria-labelledby="titulo descripcion" role="img">
+  <title id="titulo">Mi titulo</title>
+  <desc id="descripcion">
+  Mis descripcion
+  </desc>
+</svg>
+```
+
+### Soporte de navegadores
+
+[caniuse.com](https://caniuse.com/) Podemos analizar el soporte para `svg` para los diferentes navegadores
+
+## Incorporando SVG a la web

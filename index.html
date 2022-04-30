@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div>
+      <svg width="400" height="400">
+        <rect
+          x="50"
+          y="100"
+          width="300"
+          height="200"
+          stroke="#f5bfd2"
+          stroke-width="10"
+          stroke-linejoin="bevel"
+          class="my-styles"
+        />
+      </svg>
+      <svg width="400" height="400">
+        <circle
+          cx="200"
+          cy="200"
+          r="150"
+          fill="#d0bcac"
+          stroke="#f5bfd2"
+          stroke-width="10"
+        />
+      </svg>
+      <svg width="400" height="400">
+        <ellipse cx="200" cy="200" rx="100" ry="200" fill="#f5bfd2" />
+      </svg>
+      <svg width="200" height="200">
+        <rect x="25" y="40" class="my-styles" />
+      </svg>
+      <svg width="200" height="200">
+        <line
+          x1="40"
+          y1="40"
+          x2="170"
+          y2="150"
+          stroke="#f5bfd2"
+          stroke-width="40"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg width="400" height="400">
+        <polyline
+          points="100,300 150,300 150,250 200,250 200,200 250,200 250,150 300,150 300,100"
+          fill="none"
+          stroke="#e6a57e"
+          stroke-width="5"
+        />
+      </svg>
+      <svg width="400" height="400">
+        <polygon
+          points="100,300 150,300 150,250 200,250 200,200 250,200 250,150 300,150 300,100"
+          fill="none"
+          stroke="#e6a57e"
+          stroke-width="5"
+        />
+        <polygon
+          points="150,55 200,55 225,80, 225,130 200,155 150,155 125,130 125,80"
+          fill="#e5db9c"
+          stroke="#beb4c5"
+          stroke-width="5"
+        />
+      </svg>
+      <svg width="400" height="400">
+        <path d="M10 10 H 90 V 90 H 10 Z" fill="#e5db9c" />
+        <path d="M10 380 L 350 300" stroke="#e6a57e" />
+        <path d="M0,200 Q250,10  400,200" stroke="#e6a57e" fill="none" />
+      </svg>
+      <!-- cortado -->
+      <svg width="200" height="200">
+        <circle
+          cx="200"
+          cy="200"
+          r="150"
+          fill="#d0bcac"
+          stroke="#f5bfd2"
+          stroke-width="10"
+        />
+      </svg>
+      <!-- con viewBox -->
+      <svg width="200" height="200" viewBox="0 0 400 400">
+        <circle
+          cx="200"
+          cy="200"
+          r="150"
+          fill="#d0bcac"
+          stroke="#f5bfd2"
+          stroke-width="10"
+        />
+      </svg>
+      <svg
+        width="200"
+        height="200"
+        viewBox="0 0 200 400"
+        preserveAspectRatio="none"
+      >
+        <circle
+          cx="100"
+          cy="100"
+          r="50"
+          fill="#d0bcac"
+          stroke="#f5bfd2"
+          stroke-width="10"
+        />
+      </svg>
+      <svg width="200" height="200">
+        <text
+          x="50%"
+          y="50%"
+          text-anchor="middle"
+          dominant-baseline="middle"
+          font-size="50"
+          fill="#f5bfd2"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          HOLI
+        </text>
+      </svg>
+      <svg width="200" height="200" viewBox="0 0 50 50">
+        <path
+          id="star"
+          fill="#e5db9c"
+          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+        />
+        <use xlink:href="#star" class="use-star" transform="scale(.3)" />
+        <use
+          xlink:href="#star"
+          class="use-star"
+          transform="scale(.3) translate(117)"
+        />
+      </svg>
+      <svg width="200" height="200">
+        <defs>
+          <path id="defs-exa" d="M50,160 Q425,10 800,160" />
+        </defs>
+        <text fill="#e5db9c" font-size="20">
+          <textPath xlink:href="#defs-exa">HOLI MUNDI</textPath>
+        </text>
+      </svg>
+      <svg width="200" height="200" viewBox="0 0 50 50">
+        <defs>
+          <style>
+            @media screen and (max-width: 900px) {
+              .star-1 {
+                display: none;
+              }
+            }
+            @media screen and (max-width: 600px) {
+              .star-2 {
+                display: none;
+              }
+            }
+          </style>
+        </defs>
+        <path
+          id="star"
+          fill="#e5db9c"
+          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+        />
+        <use xlink:href="#star" class="use-star star-1" transform="scale(.3)" />
+        <use
+          xlink:href="#star"
+          class="use-star star-2"
+          transform="scale(.3) translate(117)"
+        />
+      </svg>
+      <svg width="200" height="200" viewBox="0 0 50 50">
+        <path
+          id="star"
+          fill="#e5db9c"
+          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+          class="stroke-responsive"
+        />
+        <use xlink:href="#star" class="use-star stroke-responsive" transform="scale(.3)" />
+        <use
+          xlink:href="#star"
+          class="use-star stroke-responsive"
+          transform="scale(.3) translate(117)"
+        />
+      </svg>
+    </div>
+    <div>
+      <svg width="400" height="400">
+        <rect x="0" y="0" width="100" height="100" fill="#f5bfd2" />
+        <rect x="100" y="100" width="100" height="100" fill="#e5db9c" />
+        <rect x="200" y="200" width="100" height="100" fill="#beb4c5" />
+        <rect x="300" y="300" width="100" height="100" fill="#e6a57e" />
+      </svg>
+      <svg width="400" height="400">
+        <circle cx="350" cy="50" r="50" fill="#f5bfd2" />
+        <circle cx="250" cy="150" r="50" fill="#e5db9c" />
+        <circle cx="150" cy="250" r="50" fill="#beb4c5" />
+        <circle cx="50" cy="350" r="50" fill="#e6a57e" />
+      </svg>
+      <svg width="400" height="400">
+        <ellipse cx="100" cy="50" rx="100" ry="50" fill="#f5bfd2" />
+        <ellipse cx="180" cy="150" rx="100" ry="50" fill="#e5db9c" />
+        <ellipse cx="250" cy="250" rx="100" ry="50" fill="#beb4c5" />
+        <ellipse cx="300" cy="350" rx="100" ry="50" fill="#e6a57e" />
+      </svg>
+      <svg width="400" height="400">
+        <line
+          x1="50"
+          y1="100"
+          x2="350"
+          y2="100"
+          stroke="#f5bfd2"
+          stroke-width="40"
+          stroke-linecap="round"
+        />
+        <line
+          x1="50"
+          y1="200"
+          x2="350"
+          y2="200"
+          stroke="#e5db9c"
+          stroke-width="40"
+          stroke-linecap="butt"
+        />
+        <line
+          x1="50"
+          y1="300"
+          x2="350"
+          y2="300"
+          stroke="#e6a57e"
+          stroke-width="40"
+          stroke-linecap="square"
+        />
+        <line x1="50" y1="20" x2="50" y2="380" stroke="#beb4c5" />
+        <line x1="350" y1="20" x2="350" y2="380" stroke="#beb4c5" />
+      </svg>
+      <svg width="400" height="400">
+        <polygon points="0,400 200,0 400,400 0,100 400,150" fill="#e6a57e" />
+      </svg>
+      <svg width="200" height="200">
+        <text
+          x="50%"
+          y="50%"
+          text-anchor="middle"
+          dy=".3em"
+          font-size="50"
+          fill="#f5bfd2"
+          font-family="Arial, Helvetica, sans-serif"
+        >
+          HOLI
+          <tspan font-size="20" dy="-10" dx="-5">MUNDI</tspan>
+        </text>
+      </svg>
+      <svg width="400" height="200" viewBox="0 0 400 200">
+        <defs>
+          <path id="testPath" d="M0,126 Q200,40 400,126" />
+        </defs>
+        <text
+          x="50%"
+          y="50%"
+          fill="#f5bfd2"
+          font-size="46"
+          text-anchor="middle"
+          dominant-baseline="middle"
+        >
+          <textPath xlink:href="#testPath">HOLI MUNDI</textPath>
+        </text>
+      </svg>
+      <svg style="display: none">
+        <symbol id="symbol-star" viewBox="0 0 400 400">
+          <g>
+            <polygon points="0,400 200,0 400,400 0,100 400,150" />
+          </g>
+        </symbol>
+      </svg>
+      <svg width="200" height="200">
+        <use xlink:href="#symbol-star" fill="#e6a57e" />
+      </svg>
+      <svg width="200" height="200">
+        <use xlink:href="#symbol-star" fill="#f5bfd2" />
+      </svg>
+    </div>
+  </body>
+</html>
