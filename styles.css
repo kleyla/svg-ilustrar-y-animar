@@ -45,6 +45,38 @@ svg rect {
   stroke: 5px;
   vector-effect: non-scaling-stroke;
 }
+.rectangulo {
+  transform: scale(1.5) translate(5px, 4px) rotate(50deg);
+}
+
+.rectangulo-2 {
+  fill: var(--burly-wood);
+}
+.rect-2 {
+  animation: rotacion 3s linear infinite;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+.ejemplo1 {
+  width: 100px;
+  height: 150px;
+  background-color: var(--azalea);
+  margin: 50px 0 0 100px;
+  animation: rotacion 3s linear infinite;
+}
+@keyframes rotacion {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rect-3 {
+  fill: var(--azalea);
+  transform: skewX(20deg);
+}
+.rect-4 {
+  fill: var(--azalea);
+  transform: skewY(20deg);
+}
 /* Penguin 
 plomo 727272
 plomo oscuro 2D2D2D

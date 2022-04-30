@@ -180,15 +180,80 @@
           d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
           class="stroke-responsive"
         />
-        <use xlink:href="#star" class="use-star stroke-responsive" transform="scale(.3)" />
+        <use
+          xlink:href="#star"
+          class="use-star stroke-responsive"
+          transform="scale(.3)"
+        />
         <use
           xlink:href="#star"
           class="use-star stroke-responsive"
           transform="scale(.3) translate(117)"
         />
       </svg>
+      <svg width="200" height="200" viewBox="0 0 50 50">
+        <rect
+          fill="#f5bfd2"
+          x="5"
+          y="5"
+          width="20"
+          height="20"
+          transform="scale(1.5) translate(1 0)"
+        />
+      </svg>
+      <svg width="200" height="200" viewBox="0 0 50 50">
+        <rect
+          fill="#f5bfd2"
+          x="5"
+          y="5"
+          width="20"
+          height="20"
+          class="rectangulo"
+        />
+      </svg>
+      <svg width="400" height="200">
+        <defs>
+          <linearGradient id="degradado">
+            <stop offset="0%" stop-color="#ffff00" />
+            <stop offset="50%" stop-color="hotpink" />
+            <stop offset="100%" stop-color="#ffa500" />
+          </linearGradient>
+        </defs>
+        <rect fill="url(#degradado)" x="0" y="0" width="100%" height="100%" />
+      </svg>
+      <svg width="400" height="200">
+        <defs>
+          <linearGradient id="degradado2" x1="0" y1="100%" x2="100%" y2="0">
+            <stop offset="0%" stop-color="#ffff00" />
+            <stop offset="50%" stop-color="hotpink" />
+            <stop offset="100%" stop-color="#ffa500" />
+          </linearGradient>
+        </defs>
+        <rect fill="url(#degradado2)" x="0" y="0" width="100%" height="100%" />
+      </svg>
+      <svg width="400" height="400">
+        <defs>
+          <pattern
+            id="patron"
+            x="0"
+            y="0"
+            width="5"
+            height="5"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect width="5" height="5" fill="#762647" />
+            <circle cx="3" cy="3" r="1" fill="#e3be70" />
+          </pattern>
+        </defs>
+        <path
+          fill="url(#patron)"
+          stroke="#ef615f"
+          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+          transform="scale(8)"
+        />
+      </svg>
     </div>
-    <div>
+    <div id="second-column">
       <svg width="400" height="400">
         <rect x="0" y="0" width="100" height="100" fill="#f5bfd2" />
         <rect x="100" y="100" width="100" height="100" fill="#e5db9c" />
@@ -282,6 +347,47 @@
       </svg>
       <svg width="200" height="200">
         <use xlink:href="#symbol-star" fill="#f5bfd2" />
+      </svg>
+      <div class="ejemplo1"></div>
+      <svg width="400" height="400">
+        <g class="rect-2">
+          <rect class="rectangulo-2" x="100" y="100" width="100" height="150" />
+        </g>
+      </svg>
+      <svg width="200" height="200">
+        <rect x="10" y="10" width="130" height="100" class="rect-3" />
+      </svg>
+      <svg width="200" height="200">
+        <rect x="10" y="10" width="130" height="100" class="rect-4" />
+      </svg>
+      <svg width="200" height="200">
+        <rect x="10" y="50" width="130" height="100" fill="red" />
+        <path
+          fill="#e5db9c"
+          stroke="none"
+          d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+          transform="scale(1.5) translate(30 40) "
+        />
+      </svg>
+      <svg width="400" height="150">
+        <defs>
+          <linearGradient id="degradado3">
+            <stop offset="0%" stop-color="#ed6e46" />
+            <stop offset="10%" stop-color="#b4c63b" />
+            <stop offset="20%" stop-color="#ef5b2b" />
+            <stop offset="30%" stop-color="#503969" />
+            <stop offset="40%" stop-color="#ab6294" />
+            <stop offset="50%" stop-color="#1cb98f" />
+            <stop offset="60%" stop-color="#48afc1" />
+            <stop offset="70%" stop-color="#b4c63b" />
+            <stop offset="80%" stop-color="#ef5b2b" />
+            <stop offset="90%" stop-color="#503969" />
+            <stop offset="100%" stop-color="#ab6294" />
+          </linearGradient>
+        </defs>
+        <text x="30" y="90" fill="url(#degradado3)" font-size="40">
+          HOLI MUNDI
+        </text>
       </svg>
     </div>
   </body>

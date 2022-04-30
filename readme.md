@@ -13,7 +13,9 @@ En `svg` se pueden tener elementos como
 - `use`
 - `defs`
 - `symbol`
--
+- `linearGradient`
+- `stop`
+- `pattern`
 
 _Estos tag tambien pueden ser alterados desde una hoja de estilos._
 
@@ -181,7 +183,7 @@ Es quiza la unica etiqueta q puede tener `viewBox`. Podemos crear el svg y volve
 </svg>
 ```
 
-## Optimizacion SVG
+## Incorporando SVG a la web
 
 ## Cargar SVG a la web
 
@@ -281,4 +283,80 @@ El atributo `role` tambien nos ayuda
 
 [caniuse.com](https://caniuse.com/) Podemos analizar el soporte para `svg` para los diferentes navegadores
 
-## Incorporando SVG a la web
+## Efectos SVG
+
+Similar a la de CSS
+
+```html
+<rect transform="rotate(20)" />
+<rect transform="scale(1.2)" />
+<rect transform="translate(20 20)" /> // en el eje (x y)
+<rect transform="skewX(20)" />
+<rect transform="skewY(-10)" />
+```
+
+Tambien lo podemos poner en CSS
+
+```css
+.rectangulo {
+  transform: scale(1.5) translate(5px, 0) rotate(50deg);
+}
+```
+
+Cuando los elementos de SVG rotan no lo hacen desde el centro, sino desde la esquina superior izquierda
+
+```css
+.rect-2 {
+  animation: rotacion 3s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes rotacion {
+  to {
+    transform: rotate(360deg);
+  }
+}
+```
+
+En google este se mueve desde su centro, en firefox es diferente ya que lo aplica desde el SVG
+
+```css
+.rect-2 {
+  animation: rotacion 3s linear infinite;
+  transform-origin: 50% 50%;
+  transform-box: fill-box; // con esta linea se arregla de firefox
+}
+```
+
+### Degradados
+
+Por defecto el degradado es horizontal
+
+```html
+<svg>
+  <defs>
+    <linearGradient id="degradado">
+      <stop offset="0%" stop-color="#ffff00" />
+      <stop offset="100%" stop-color="#ffa500" />
+    </linearGradient>
+  </defs>
+  <rect fill="url(#degradado)" x="0" y="0" width="100%" height="100%" />
+</svg>
+```
+
+Para in degradado en diagonal:
+En `linearGradient` le damos el inicio `x1` y `y1` y el final `x2` y `y2`
+
+```html
+<svg width="400" height="200">
+  <defs>
+    <linearGradient id="degradado2" x1="0" y1="100%" x2="100%" y2="0">
+      <stop offset="0%" stop-color="#ffff00" />
+      <stop offset="50%" stop-color="hotpink" />
+      <stop offset="100%" stop-color="#ffa500" />
+    </linearGradient>
+  </defs>
+  <rect fill="url(#degradado2)" x="0" y="0" width="100%" height="100%" />
+</svg>
+```
+
+### Patrones
