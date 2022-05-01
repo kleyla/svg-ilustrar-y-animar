@@ -16,6 +16,9 @@ En `svg` se pueden tener elementos como
 - `linearGradient`
 - `stop`
 - `pattern`
+- `clipPath`
+- `image`
+- `mask`
 
 _Estos tag tambien pueden ser alterados desde una hoja de estilos._
 
@@ -360,3 +363,53 @@ En `linearGradient` le damos el inicio `x1` y `y1` y el final `x2` y `y2`
 ```
 
 ### Patrones
+
+```html
+<svg width="400" height="400">
+  <defs>
+    <pattern
+      id="patron"
+      x="0"
+      y="0"
+      width="5"
+      height="5"
+      patternUnits="userSpaceOnUse"
+    >
+      <rect width="5" height="5" fill="#762647" />
+      <circle cx="3" cy="3" r="1" fill="#e3be70" />
+    </pattern>
+  </defs>
+  <path
+    fill="url(#patron)"
+    stroke="#ef615f"
+    d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+    transform="scale(8)"
+  />
+</svg>
+```
+
+### Mascaras y clipping paths
+
+### Filtros
+
+```html
+<svg width="400" height="400" viewBox="0 0 600 400">
+  <defs>
+    <filter id="desenfoca">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+    </filter>
+  </defs>
+  <image
+    filter="url(#desenfoca)"
+    xlink:href="https://upload.wikimedia.org/wikipedia/commons/c/c5/CircusTent02.jpg"
+    x="-25%"
+    y="0"
+    height="100%"
+    width="100%"
+  />
+</svg>
+```
+
+En index vemos aplicado en hover.
+
+https://testdrive-archive.azurewebsites.net/graphics/hands-on-css3/hands-on_svg-filter-effects.htm

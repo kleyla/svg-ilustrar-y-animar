@@ -242,7 +242,7 @@
             patternUnits="userSpaceOnUse"
           >
             <rect width="5" height="5" fill="#762647" />
-            <circle cx="3" cy="3" r="1" fill="#e3be70" />
+            <circle cx="3" cy="3" r="1.1" fill="#e3be70" />
           </pattern>
         </defs>
         <path
@@ -250,6 +250,21 @@
           stroke="#ef615f"
           d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
           transform="scale(8)"
+        />
+      </svg>
+      <svg width="400" height="400" viewBox="0 0 600 400">
+        <defs>
+          <filter id="desenfoca">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+          </filter>
+        </defs>
+        <image
+          id="desenfoca-hover"
+          xlink:href="https://upload.wikimedia.org/wikipedia/commons/c/c5/CircusTent02.jpg"
+          x="-25%"
+          y="0"
+          height="100%"
+          width="100%"
         />
       </svg>
     </div>
@@ -388,6 +403,64 @@
         <text x="30" y="90" fill="url(#degradado3)" font-size="40">
           HOLI MUNDI
         </text>
+      </svg>
+      <svg width="400" height="400" viewBox="0 0 600 400">
+        <defs>
+          <clipPath id="estrella">
+            <path
+              stroke="#ef615f"
+              d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+              transform="scale(9)"
+            />
+          </clipPath>
+        </defs>
+        <image
+          clip-path="url(#estrella)"
+          xlink:href="https://upload.wikimedia.org/wikipedia/commons/c/c5/CircusTent02.jpg"
+          x="-25%"
+          y="0"
+          height="100%"
+          width="100%"
+        />
+      </svg>
+      <svg width="400" height="300" viewBox="0 0 900 600">
+        <defs>
+          <clipPath id="clip-text">
+            <text x="0" y="30%" font-size="120" font-weight="bold">
+              <tspan dx="100" dy="0">Show me</tspan>
+              <tspan dx="-650" dy="200">your code</tspan>
+            </text>
+          </clipPath>
+        </defs>
+        <image
+          clip-path="url(#clip-text)"
+          xlink:href="https://upload.wikimedia.org/wikipedia/commons/a/a6/Long_exposure_at_the_fair.jpg"
+          x="0"
+          y="0"
+          height="100%"
+          width="100%"
+        />
+      </svg>
+      <svg width="400" height="400" viewBox="0 0 600 400">
+        <defs>
+          <mask id="estrella2">
+            <path
+              stroke="white"
+              fill="black"
+              d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+              transform="scale(8)"
+            />
+            <circle cx="200" cy="200" r="50" fill="white" />
+          </mask>
+        </defs>
+        <image
+          mask="url(#estrella2)"
+          xlink:href="https://upload.wikimedia.org/wikipedia/commons/c/c5/CircusTent02.jpg"
+          x="-25%"
+          y="0"
+          height="100%"
+          width="100%"
+        />
       </svg>
     </div>
   </body>

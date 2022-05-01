@@ -77,6 +77,9 @@ svg rect {
   fill: var(--azalea);
   transform: skewY(20deg);
 }
+#desenfoca-hover:hover {
+  filter: url(#desenfoca);
+}
 /* Penguin 
 plomo 727272
 plomo oscuro 2D2D2D
