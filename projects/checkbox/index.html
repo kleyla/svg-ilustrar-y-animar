@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #bcd9c6;
+      }
+
+      .check-container {
+        position: relative;
+        margin-top: 200px;
+      }
+
+      .check {
+        width: 50px;
+        height: 50px;
+        background: none;
+        border: 2px solid #762647;
+        -webkit-appearance: none;
+        outline: none;
+        vertical-align: middle;
+      }
+
+      .check-line {
+        width: 50px;
+        height: 50px;
+        fill: none;
+        stroke: #ef615f;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-width: 10px;
+        position: absolute;
+        z-index: -1;
+        left: 2px;
+      }
+
+      .animado {
+        transition: stroke-dashoffset 0.5s;
+      }
+
+      label {
+        font-family: sans-serif;
+        font-size: 50px;
+        vertical-align: middle;
+        color: #762647;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="check-container">
+      <input type="checkbox" id="check" class="check" />
+      <svg
+        viewBox="0 0 100 100"
+        class="check-line"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path class="trazo" d="M10,50 L40,80 90,10" />
+      </svg>
+
+      <label for="check">Acepto las condiciones</label>
+    </div>
+    <script>
+      var checkBox = document.querySelector("#check"),
+        path = document.querySelector(".trazo"),
+        length = path.getTotalLength();
+
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+
+      checkBox.addEventListener("change", function () {
+        if (this.checked == true) {
+          path.classList.add("animado");
+          path.style.strokeDashoffset = 0;
+        } else {
+          path.classList.remove("animado");
+          path.style.strokeDashoffset = length;
+        }
+      });
+    </script>
+  </body>
+</html>
