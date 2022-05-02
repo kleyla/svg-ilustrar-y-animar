@@ -115,3 +115,33 @@ svg rect {
     stroke-dashoffset: 0;
   }
 }
+/* Animacion con JS */
+.check-container {
+  position: relative;
+  text-align: left;
+}
+.check {
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 2px solid var(--azalea);
+  -webkit-appearance: none;
+  outline: none;
+  vertical-align: middle;
+}
+.check-line {
+  width: 50px;
+  height: 50px;
+  fill: none;
+  background-color: transparent;
+  stroke: #ef615f;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 10px;
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+}
+.animado {
+  transition: stroke-dashoffset 0.5s;
+}

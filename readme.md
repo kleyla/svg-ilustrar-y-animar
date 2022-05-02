@@ -462,12 +462,46 @@ Un efecto muy llamativo y relativamente simple es el hecho de animar los bordes 
 }
 ```
 
-[Ejemplo](https://codepen.io/htmlboy/pen/zNMzVJ)
-[Ejemplo firma](https://codepen.io/ghepting/pen/vYLqgr)
-[Ejempo heart](https://valhead.com/2017/03/03/three-illustrator-tricks-for-better-svg-stroke-animations/)
+- [Ejemplo](https://codepen.io/htmlboy/pen/zNMzVJ)
+- [Ejemplo firma](https://codepen.io/ghepting/pen/vYLqgr)
+- [Ejempo heart](https://valhead.com/2017/03/03/three-illustrator-tricks-for-better-svg-stroke-animations/)
 
 ### Animacion interactiva
 
-[Ejmplo bombilla](https://codepen.io/htmlboy/pen/bgQXGB)
-[Ejemplo bombilla boton](https://codepen.io/htmlboy/pen/MpOzzZ)
-[Cubic bezier](https://cubic-bezier.com/#.17,.67,.83,.67)
+- [Ejmplo bombilla](https://codepen.io/htmlboy/pen/bgQXGB)
+- [Ejemplo bombilla boton](https://codepen.io/htmlboy/pen/MpOzzZ)
+- [Cubic bezier](https://cubic-bezier.com/#.17,.67,.83,.67)
+
+## Interaccion y Animacion avanzada
+
+### Animacion con JS
+
+[Svg circus](https://svgcircus.com/)
+
+### Librerías de JavaScript para animació
+
+- [snapsvg](http://snapsvg.io/)
+- [velocityjs](http://velocityjs.org/)
+- [d3js](https://d3js.org/)
+- [greensock](https://greensock.com/)
+
+### Checkbox animado
+
+- [tympanus](https://tympanus.net/Development/AnimatedCheckboxes/)
+- [polylion](https://css-tricks.com/polylion/)
+
+### Mutación (morphing) en SVG
+
+[Ejemplos en iconos](https://tympanus.net/Development/AnimatedSVGIcons/)
+[Ejemplos de globos](https://codepen.io/htmlboy/pen/EWbJOZ)
+
+### Animación a lo largo de un trazo
+
+### Inspiracion
+
+[Museo](https://mfs.dk/en/exhibition/)
+[Miyasaki](https://codepen.io/nerdmanship/full/xgmBKg/)
+[Efecto de agua](https://codepen.io/sdras/full/VPqrOR/)
+[Ballena icon](https://codepen.io/pnowell/pen/QyZVro)
+[Landscape circle](https://codepen.io/timrijkse/pen/XNjQBR)
+[Elastic SVG Elements](https://tympanus.net/Development/ElasticSVGElements/button.html)
