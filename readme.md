@@ -73,9 +73,16 @@ _Estos tag tambien pueden ser alterados desde una hoja de estilos._
 
 **Para path**
 
-- `d`
-- ``
-- ``
+- M = moveto
+- L = lineto
+- H = horizontal lineto
+- V = vertical lineto
+- C = curveto
+- S = smooth curveto
+- Q = quadratic Bézier curve
+- T = smooth quadratic Bézier curveto
+- A = elliptical Arc
+- Z = closepath
 
 Ejemplo:
 
@@ -413,3 +420,54 @@ En `linearGradient` le damos el inicio `x1` y `y1` y el final `x2` y `y2`
 En index vemos aplicado en hover.
 
 https://testdrive-archive.azurewebsites.net/graphics/hands-on-css3/hands-on_svg-filter-effects.htm
+
+## Animacion en SVG
+
+### Tipos de animacion
+
+SVG tiene un lenguaje propio de animación llamado SMIL, pero está dejando de usarse en favor de la animación con CSS y con JavaScript. Vamos a ver porqué y cuáles son las principales diferencias entre estos métodos
+
+- Animacion CSS: keyframes
+- Animacion SMIL: (Algunos navegadores ya no le dan soporte)
+- Animacion JS: con librerias
+  - Ejemplos: [Estrella](https://codepen.io/jessenwells/pen/WvORge) [Atomo](https://codepen.io/joshy/pen/qBrNdL)
+
+### Animacion de secuencia
+
+[Ejemplo](https://codepen.io/htmlboy/pen/MJzdGW)
+
+### Animacion de dibujado
+
+Un efecto muy llamativo y relativamente simple es el hecho de animar los bordes de una ilustración, dando la impresión de que se dibuja a sí misma.
+
+```html
+<svg width="400" height="300" viewBox="0 0 600 500">
+  <rect id="rect-draw" x="100" y="50" width="300" height="300" />
+</svg>
+```
+
+```css
+#rect-draw {
+  fill: none;
+  stroke: #ef615f;
+  stroke-width: 5px;
+  stroke-dasharray: 1200px;
+  stroke-dashoffset: 1200px;
+  animation: draw 2s forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+```
+
+[Ejemplo](https://codepen.io/htmlboy/pen/zNMzVJ)
+[Ejemplo firma](https://codepen.io/ghepting/pen/vYLqgr)
+[Ejempo heart](https://valhead.com/2017/03/03/three-illustrator-tricks-for-better-svg-stroke-animations/)
+
+### Animacion interactiva
+
+[Ejmplo bombilla](https://codepen.io/htmlboy/pen/bgQXGB)
+[Ejemplo bombilla boton](https://codepen.io/htmlboy/pen/MpOzzZ)
+[Cubic bezier](https://cubic-bezier.com/#.17,.67,.83,.67)
